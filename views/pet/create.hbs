@@ -1,0 +1,12 @@
+<h1>Create new pet</h1>
+<form action="/pet/create" method="post">
+  <label for="name">name
+    <input type="text" name="name" id="name" />
+  </label>
+  <select name="user" id="user">
+    {{#each users}}
+      <option value="{{this._id}}">{{this.username}}</option>
+    {{/each}}
+  </select>
+  <button type="submit">Create pet</button>
+</form>
